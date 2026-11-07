@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 413" width="970" height="413">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 427" width="1000" height="427">
 <defs>
   <style>
     .card-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 12px; }
@@ -6,70 +6,68 @@
     .row-even { fill: #0d1117; }
     .row-odd { fill: #161b22; }
     .row-divider { stroke: #21262d; stroke-width: 1px; }
-    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #58a6ff; }
-    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #8b949e; }
-    .th { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #c9d1d9; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #58a6ff; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #8b949e; }
+    .th { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #c9d1d9; }
     .td { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; fill: #e6edf3; }
-    .td-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; fill: #e6edf3; }
-    .badge-green { fill: #238636; fill-opacity: 0.2; stroke: #3fb950; stroke-width: 1px; rx: 6px; }
-    .badge-green-txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 700; fill: #3fb950; }
-    .badge-red { fill: #da3633; fill-opacity: 0.2; stroke: #f85149; stroke-width: 1px; rx: 6px; }
-    .badge-red-txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 700; fill: #f85149; }
-    .badge-blue { fill: #1f6feb; fill-opacity: 0.2; stroke: #58a6ff; stroke-width: 1px; rx: 6px; }
-    .badge-blue-txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; fill: #58a6ff; }
+    .td-text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif; font-size: 13px; fill: #e6edf3; }
+    .badge-green { fill: #238636; fill-opacity: 0.25; stroke: #3fb950; stroke-width: 1px; rx: 6px; }
+    .badge-green-txt { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", sans-serif; font-size: 12px; font-weight: 700; fill: #3fb950; }
+    .badge-red { fill: #da3633; fill-opacity: 0.25; stroke: #f85149; stroke-width: 1px; rx: 6px; }
+    .badge-red-txt { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", sans-serif; font-size: 12px; font-weight: 700; fill: #f85149; }
   </style>
 </defs>
-<rect width="970" height="413" class="card-bg" />
+<rect width="1000" height="427" class="card-bg" />
 <text x="24" y="32" class="title">DeepSeek-V4.1-Flash (552B) 640GB 物理显存分配与优化拆解</text>
 <text x="24" y="52" class="subtitle">利用 Host RAM 锁页卸载 203.4GB Engram 大表，为每卡腾出 4.0GB 独立专用 fp8_ds_mla KV 缓存池</text>
-<rect x="1" y="80" width="968" height="44" class="header-bg" />
-<line x1="1" y1="124" x2="969" y2="124" class="row-divider" stroke-width="2" />
-<text x="24" y="107" class="th" >模型组件</text>
-<text x="224" y="107" class="th" >参数格式</text>
-<text x="354" y="107" class="th" >原始占用总量</text>
-<text x="484" y="107" class="th" >部署位置与优化策略</text>
-<text x="744" y="107" class="th" >优化后单卡常驻显存</text>
-<rect x="1" y="124" width="968" height="44" class="row-even" />
-<line x1="1" y1="168" x2="969" y2="168" class="row-divider" />
-<text x="24" y="150" class="td" >MoE 路由专家 (384 专家)</text>
-<text x="224" y="150" class="td" >FP4 量化</text>
-<text x="354" y="150" class="td" >296.0 GB</text>
-<text x="484" y="150" class="td" >PP2 跨机切分 + TP8 机内分片</text>
-<text x="744" y="150" class="td" >~18.5 GB / 卡</text>
-<rect x="1" y="168" width="968" height="44" class="row-odd" />
-<line x1="1" y1="212" x2="969" y2="212" class="row-divider" />
-<text x="24" y="194" class="td-text" >Engram 知识库大表</text>
-<text x="224" y="194" class="td" >BF16 / FP8</text>
-<text x="354" y="194" class="td" >203.4 GB</text>
-<text x="484" y="194" class="td-text" >CPU 锁页内存卸载 (Host RAM)</text>
-<rect x="742" y="178" width="152" height="24" class="badge-green" />
-<text x="744" y="194" class="badge-green-txt" >0.0 GB (省出 203GB)</text>
-<rect x="1" y="212" width="968" height="44" class="row-even" />
-<line x1="1" y1="256" x2="969" y2="256" class="row-divider" />
-<text x="24" y="238" class="td-text" >Attention 与 Dense 骨干</text>
-<text x="224" y="238" class="td" >MXFP8 / BF16</text>
-<text x="354" y="238" class="td" >~11.0 GB</text>
-<text x="484" y="238" class="td" >TP8 机内分片常驻</text>
-<text x="744" y="238" class="td" >~0.7 GB / 卡</text>
-<rect x="1" y="256" width="968" height="44" class="row-odd" />
-<line x1="1" y1="300" x2="969" y2="300" class="row-divider" />
-<text x="24" y="282" class="td-text" >CUDA Graph 捕获工作区</text>
-<text x="224" y="282" class="td-text" >激活张量池</text>
-<text x="354" y="282" class="td" >~35.0 GB</text>
-<text x="484" y="282" class="td-text" >预分配静态执行图，消除重分配</text>
-<text x="744" y="282" class="td" >~2.2 GB / 卡</text>
-<rect x="1" y="300" width="968" height="44" class="row-even" />
-<line x1="1" y1="344" x2="969" y2="344" class="row-divider" />
-<text x="24" y="326" class="td-text" >通信与临时 Buffer</text>
-<text x="224" y="326" class="td" >NCCL / P2P</text>
-<text x="354" y="326" class="td" >~32.0 GB</text>
-<text x="484" y="326" class="td" >专用 P2P 缓冲区与 Mailbox</text>
-<text x="744" y="326" class="td" >~2.0 GB / 卡</text>
-<rect x="1" y="344" width="968" height="44" class="row-odd" />
-<line x1="1" y1="388" x2="969" y2="388" class="row-divider" />
-<text x="24" y="370" class="td-text" >可分配 KV Cache 缓存池</text>
-<text x="224" y="370" class="td" >fp8_ds_mla</text>
-<text x="354" y="370" class="td" >~64.0 GB</text>
-<text x="484" y="370" class="td-text" >每卡独立专用紧凑缓存空间</text>
-<text x="744" y="370" class="td" >4.0 GB / 卡 (~565万Token)</text>
+<rect x="1" y="80" width="998" height="46" class="header-bg" />
+<line x1="1" y1="126" x2="999" y2="126" class="row-divider" stroke-width="2" />
+<text x="24" y="108" class="th" >模型组件</text>
+<text x="234" y="108" class="th" >参数格式</text>
+<text x="364" y="108" class="th" >原始占用总量</text>
+<text x="494" y="108" class="th" >部署位置与优化策略</text>
+<text x="764" y="108" class="th" >优化后单卡常驻显存</text>
+<rect x="1" y="126" width="998" height="46" class="row-even" />
+<line x1="1" y1="172" x2="999" y2="172" class="row-divider" />
+<text x="24" y="154" class="td" >MoE 路由专家 (384 专家)</text>
+<text x="234" y="154" class="td" >FP4 量化</text>
+<text x="364" y="154" class="td" >296.0 GB</text>
+<text x="494" y="154" class="td" >PP2 跨机切分 + TP8 机内分片</text>
+<text x="764" y="154" class="td" >~18.5 GB / 卡</text>
+<rect x="1" y="172" width="998" height="46" class="row-odd" />
+<line x1="1" y1="218" x2="999" y2="218" class="row-divider" />
+<text x="24" y="200" class="td-text" >Engram 知识库大表</text>
+<text x="234" y="200" class="td" >BF16 / FP8</text>
+<text x="364" y="200" class="td" >203.4 GB</text>
+<text x="494" y="200" class="td-text" >CPU 锁页内存卸载 (Host RAM)</text>
+<rect x="762" y="183" width="164" height="24" class="badge-green" />
+<text x="764" y="200" class="badge-green-txt" >0.0 GB (省出 203GB)</text>
+<rect x="1" y="218" width="998" height="46" class="row-even" />
+<line x1="1" y1="264" x2="999" y2="264" class="row-divider" />
+<text x="24" y="246" class="td-text" >Attention 与 Dense 骨干</text>
+<text x="234" y="246" class="td" >MXFP8 / BF16</text>
+<text x="364" y="246" class="td" >~11.0 GB</text>
+<text x="494" y="246" class="td" >TP8 机内分片常驻</text>
+<text x="764" y="246" class="td" >~0.7 GB / 卡</text>
+<rect x="1" y="264" width="998" height="46" class="row-odd" />
+<line x1="1" y1="310" x2="999" y2="310" class="row-divider" />
+<text x="24" y="292" class="td-text" >CUDA Graph 捕获工作区</text>
+<text x="234" y="292" class="td-text" >激活张量池</text>
+<text x="364" y="292" class="td" >~35.0 GB</text>
+<text x="494" y="292" class="td-text" >预分配静态执行图，消除重分配</text>
+<text x="764" y="292" class="td" >~2.2 GB / 卡</text>
+<rect x="1" y="310" width="998" height="46" class="row-even" />
+<line x1="1" y1="356" x2="999" y2="356" class="row-divider" />
+<text x="24" y="338" class="td-text" >通信与临时 Buffer</text>
+<text x="234" y="338" class="td" >NCCL / P2P</text>
+<text x="364" y="338" class="td" >~32.0 GB</text>
+<text x="494" y="338" class="td" >专用 P2P 缓冲区与 Mailbox</text>
+<text x="764" y="338" class="td" >~2.0 GB / 卡</text>
+<rect x="1" y="356" width="998" height="46" class="row-odd" />
+<line x1="1" y1="402" x2="999" y2="402" class="row-divider" />
+<text x="24" y="384" class="td-text" >可分配 KV Cache 缓存池</text>
+<text x="234" y="384" class="td" >fp8_ds_mla</text>
+<text x="364" y="384" class="td" >~64.0 GB</text>
+<text x="494" y="384" class="td-text" >每卡独立专用紧凑缓存空间</text>
+<text x="764" y="384" class="td" >4.0 GB / 卡 (~565万Token)</text>
 </svg>
